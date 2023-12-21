@@ -1,0 +1,55 @@
+{
+    "name": "coal",
+    "version": "0.0.1",
+    "description": "",
+    "author": "Samuele Radici",
+    "main": "app.js",
+    "scripts": {
+      "start": "electron .",
+      "build": "electron-builder",
+      "release": "electron-builder -p always"
+    },
+    "repository": "",
+    "publish": {
+      "provider": "github",
+      "releaseType": "release",
+      "owner": "Samuele Radici",
+      "repo": "coal"
+    },
+    "build": {
+      "artifactName": "coal-setup-${version}.${ext}",
+      "appId": "org.example.coal",
+      "productName": "coal",
+      "win": {
+        "target": [
+          "nsis"
+        ],
+        "icon": "src/assets/favicon/logo.ico",
+        "publisherName": "Samuele Radici",
+        "verifyUpdateCodeSignature": false
+      },
+      "nsis": {
+        "installerIcon": "src/assets/favicon/logoinstaller.ico",
+        "uninstallerIcon": "src/assets/favicon/logo.ico",
+        "uninstallDisplayName": "coal_UNINSTALLER",
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "coal",
+        "runAfterFinish": true,
+        "license": "LICENSE.txt"
+      }
+    },
+    "license": "ISC",
+    "devDependencies": {
+      "electron": "^27.0.1",
+      "electron-builder": "^24.6.4",
+      "electron-reloader": "^1.2.3"
+    },
+    "dependencies": {
+      "electron-log": "^5.0.1",
+      "electron-updater": "^6.1.4",
+      "discord-rpc": "^4.0.1"
+    }
+}
