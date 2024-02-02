@@ -1,43 +1,4 @@
-@window-width: 100vw;
-@window-height: 100vh;
-
-@primary-color: #c6c6d2;
-@dark-color1: #262626;
-@dark-color2: #333333;
-@dark-color3: #424242;
-@white-color: #ffffff;
-@black-color: #000000;
-
-@bg: @dark-color1;
-@text-color: @white-color;
-@hover-color: fade(@black-color, 20%);
-
-@border-radius: 9px;
-
-@title-bar-color: @dark-color1;
-@title-bar-button-color: @dark-color2;
-@title-bar-border: 2px;
-@title-bar-height: 30px;
-
-@modal-width: 50vw;
-@modal-max-width: 750px;
-@modal-min-width: 450px;
-@modal-height: 400px;
-
-@toolsbar-height: 80px;
-
-// @footer-bar-color: @dark-color1;
-// @footer-bar-button-color: @dark-color2;
-// @footer-bar-border: 2px;
-// @footer-bar-height: 25px;
-
-@body-height: calc(@window-height - @title-bar-height);// - @footer-bar-height);
-@editor-height: calc(@body-height - @toolsbar-height);
-
-:root {
-    --primary-color: @primary-color;
-    // --footer-bar-height: @footer-bar-height;
-}
+@import "variables.less";
 
 * {
     box-sizing: border-box;
@@ -249,7 +210,7 @@ input[type="color"] {
         user-select: none;
 
         .logo {
-            background-image: url("./assets/logomini.png");
+            background-image: url("../assets/logomini.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -423,10 +384,113 @@ input[type="color"] {
         }
     }
 
-    .toolsbar {
-        width: 100%;
-        height: @toolsbar-height;
+    #editor {
+        .toastui-editor-defaultUI {
+            border: 0 !important;
+            border-radius: 0 !important; 
+
+            .toastui-editor-toolbar {
+                width: 100%;
+                height: @toolsbar-height;
+
+                .toastui-editor-defaultUI-toolbar {
+                    border: 0 !important;
+                    border-radius: 0 !important;
+
+                    .toastui-editor-toolbar-group {
+
+                        .heading toastui-editor-toolbar-icons {
+
+                        }
+
+                        .toastui-editor-toolbar-divider {
+
+                        }
+
+                    }
+
+                    .toastui-editor-tooltip {
+
+                        .arrow {
+
+                        }
+
+                        .text {
+                            
+                        }
+
+                    }
+                }
+
+                .toastui-editor-popup {
+                    
+                    &.toastui-editor-popup-add-heading {
+
+                        .toastui-editor-popup-body {
+
+                            ul {
+
+                                li {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .toastui-editor-main {
+
+                &.toastui-editor-ww-mode {
+
+                    .toastui-editor-main-container {
+                        padding: 0 30px;
+                    
+                        .toastui-editor-ww-container {
+                            border-top-right-radius: 25px;
+                            border-top-left-radius: 25px;
+                            background-color: @dark-color3;
+                            box-shadow: 0px 0px 15px fade(@black-color, 50%);
+
+                            .toastui-editor {
+
+                                &.ww-mode {
+
+                                    .ProseMirror {
+                                        padding: 20px 22px !important;
+                                        
+                                        &.toastui-editor-contents {
+
+                                            >*{
+                                                color: @text-color;
+                                            }
+
+                                            h1{
+                                                border-bottom: 2px solid fade(@white-color, 20%);
+                                            }
+
+                                            strong {
+                                                font-weight: 900;
+                                            }
+
+                                            .placeholder {
+                                                color: fade(@white-color, 20%);
+                                            }
+
+                                            del {
+                                                color: fade(@white-color, 60%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
+
 
     .editor-container {
         height: @editor-height;

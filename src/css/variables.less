@@ -1,0 +1,40 @@
+@window-width: 100vw;
+@window-height: 100vh;
+
+@primary-color: #c6c6d2;
+@dark-color1: #262626;
+@dark-color2: #333333;
+@dark-color3: #424242;
+@white-color: #ffffff;
+@black-color: #000000;
+
+@bg: @dark-color1;
+@text-color: @white-color;
+@hover-color: fade(@black-color, 20%);
+
+@border-radius: 9px;
+
+@title-bar-color: @dark-color1;
+@title-bar-button-color: @dark-color2;
+@title-bar-border: 2px;
+@title-bar-height: 30px;
+
+@modal-width: 50vw;
+@modal-max-width: 750px;
+@modal-min-width: 450px;
+@modal-height: 400px;
+
+@toolsbar-height: 80px;
+
+// @footer-bar-color: @dark-color1;
+// @footer-bar-button-color: @dark-color2;
+// @footer-bar-border: 2px;
+// @footer-bar-height: 25px;
+
+@body-height: calc(@window-height - @title-bar-height);// - @footer-bar-height);
+@editor-height: calc(@body-height - @toolsbar-height);
+
+:root {
+    --primary-color: @primary-color;
+    // --footer-bar-height: @footer-bar-height;
+}

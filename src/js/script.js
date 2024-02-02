@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    initializeEditor("");
-
 });
 
 function openSettings() {
