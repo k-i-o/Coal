@@ -14,7 +14,7 @@
       "provider": "github",
       "releaseType": "release",
       "owner": "Samuele Radici",
-      "repo": "coal"
+      "repo": "Coal"
     },
     "build": {
       "artifactName": "coal-setup-${version}.${ext}",
@@ -38,7 +38,7 @@
         "createStartMenuShortcut": true,
         "shortcutName": "Coal",
         "runAfterFinish": true,
-        "preMachine": "true",
+        "perMachine": "true",
         "license": "LICENSE.txt"
       }
     },

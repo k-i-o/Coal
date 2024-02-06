@@ -23,11 +23,11 @@ async function setActivity() {
     const activity = { 
         instance: false, 
         startTimestamp, 
-        details: "TEST APPLICATION",
-        state: "editeting...",
-        largeImageKey: "img1",
+        details: "Coal - Rich Text Editor",
+        state: "Writing...",
+        largeImageKey: "biglogodss",
         largeImageText: "Logo",
-        smallImageKey: "img2",
+        smallImageKey: "smalllogodss",
         smallImageText: "Context",
     }; 
 
@@ -89,7 +89,7 @@ const createWindow = () => {
 
 app.whenReady().then(async ()=>{
 
-    discordRPC("DISCORD_CLIENT_ID");
+    discordRPC("1204484291401097296");
 
     ipcMain.on('close', () => {
         BrowserWindow.getFocusedWindow().close();
