@@ -1,7 +1,7 @@
 {
     "name": "coal",
     "version": "0.0.1",
-    "description": "",
+    "description": "Simple rich text editor",
     "author": "Samuele Radici",
     "main": "app.js",
     "scripts": {
@@ -9,7 +9,7 @@
       "build": "electron-builder",
       "release": "electron-builder -p always"
     },
-    "repository": "",
+    "repository": "https://github.com/k-i-o/Coal",
     "publish": {
       "provider": "github",
       "releaseType": "release",
@@ -18,7 +18,7 @@
     },
     "build": {
       "artifactName": "coal-setup-${version}.${ext}",
-      "appId": "org.example.coal",
+      "appId": "it.samueleradici.coal",
       "productName": "coal",
       "win": {
         "target": [
@@ -29,15 +29,16 @@
         "verifyUpdateCodeSignature": false
       },
       "nsis": {
-        "installerIcon": "src/assets/favicon/logoinstaller.ico",
+        "installerIcon": "src/assets/favicon/logo.ico",
         "uninstallerIcon": "src/assets/favicon/logo.ico",
-        "uninstallDisplayName": "coal_UNINSTALLER",
+        "uninstallDisplayName": "coal",
         "oneClick": false,
         "allowToChangeInstallationDirectory": true,
         "createDesktopShortcut": true,
         "createStartMenuShortcut": true,
-        "shortcutName": "coal",
+        "shortcutName": "Coal",
         "runAfterFinish": true,
+        "preMachine": "true",
         "license": "LICENSE.txt"
       }
     },
