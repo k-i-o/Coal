@@ -1,6 +1,6 @@
 {
     "name": "coal",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Simple rich text editor",
     "author": "Samuele Radici",
     "main": "app.js",
